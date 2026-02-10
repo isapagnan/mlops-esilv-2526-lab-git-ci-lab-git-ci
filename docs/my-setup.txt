@@ -20,6 +20,10 @@ Push/Update Rights
 
 Now let's check if we have the rights to push and update this repository... 
 
+> git add .
+> git commit -m "adding my-setup.txt"
+> git push
+... => OK
 
 
 
