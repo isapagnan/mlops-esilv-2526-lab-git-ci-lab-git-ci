@@ -36,3 +36,15 @@ jobs:
         with:
           name: my-artifact
           path: target/*.jar
+
+      # Installe la commande docker sur l'agent
+      - name: Install Docker
+        uses: docker/setup-buildx-action@v1
+        id: buildx
+        with:
+          install: true
+          
+      # Build l'image Docker
+      - name: Docker build
+        run: |
+          docker build .
